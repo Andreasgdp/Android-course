@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.editTextPersonName)
         val message = editText.text.toString()
         val intent = Intent(this, activity_address::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
+            putExtra(Constants.NAME_KEY, message)
         }
         startActivity(intent)
     }
