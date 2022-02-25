@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Billede Platform</string>
+    <string name="button_next_name">Næste</string>
+    <string name="button_prev_name">Forrige</string>
+</resources>
