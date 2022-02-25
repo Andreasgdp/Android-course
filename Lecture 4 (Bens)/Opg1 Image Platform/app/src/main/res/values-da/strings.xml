@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Billede Platform</string>
+    <string name="btn_next">Næste biled</string>
+    <string name="btn_prev">Sidste biled</string>
+</resources>
