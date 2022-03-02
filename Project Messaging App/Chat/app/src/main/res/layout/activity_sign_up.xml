@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_width="297dp"
+        android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/input_username"
@@ -65,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_google" />
+        app:srcCompat="@drawable/ic_logo" />
 
     <LinearLayout
         android:layout_width="332dp"
@@ -86,6 +86,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_google"
             android:text="@string/btn_google" />
 
         <Space
@@ -97,6 +98,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_facebook"
             android:text="@string/btn_facebook" />
 
         <Space
