@@ -7,18 +7,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.chat.databinding.ActivitySignUpBinding
+import com.example.chat.repository.UserService
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivitySignUpBinding
-
-    private lateinit var auth: FirebaseAuth;
-    private lateinit var db: FirebaseDatabase;
+    private lateinit var userService: UserService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +26,7 @@ class SignUpActivity : AppCompatActivity() {
         // don't show progressbar
         binding.loadingBar.isVisible = false;
 
-        // Initialize Firebase Auth
-        auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
+        userService = UserService();
 
         getSupportActionBar()?.hide();
 
@@ -49,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
             // show progressbar while creating account
             binding.loadingBar.isVisible = true;
 
-            auth.createUserWithEmailAndPassword(binding.inputEmail.text.toString(), binding.inputPassword.text.toString())
+            userService.createUser(binding.inputEmail.text.toString(), binding.inputPassword.text.toString())
                 .addOnCompleteListener { task -> signUpActionComplete(task) }
 
         } else {
