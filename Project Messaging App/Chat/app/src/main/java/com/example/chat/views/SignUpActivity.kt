@@ -28,12 +28,12 @@ class SignUpActivity : AppCompatActivity() {
 
         userService = UserService();
 
-        getSupportActionBar()?.hide();
+        supportActionBar?.hide();
 
         binding.btnSignup.setOnClickListener{ signUp() };
     }
 
-    fun signUp() {
+    private fun signUp() {
         if (binding.inputUsername.text.isNotEmpty() && binding.inputEmail.text.isNotEmpty() && binding.inputPassword.text.isNotEmpty()) {
             // bring down keyboard: only runs if there is a view that is currently focused
             this.currentFocus?.let { view ->
@@ -52,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    fun signUpActionComplete(task: Task<AuthResult>) {
+    private fun signUpActionComplete(task: Task<AuthResult>) {
         binding.loadingBar.isVisible = false;
 
         if (task.isSuccessful) {
