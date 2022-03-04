@@ -7,9 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.chat.databinding.ActivitySignUpBinding
+import com.example.chat.models.User
 import com.example.chat.repository.UserService
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -44,23 +43,31 @@ class SignUpActivity : AppCompatActivity() {
             // show progressbar while creating account
             binding.loadingBar.isVisible = true;
 
-            userService.createUser(binding.inputEmail.text.toString(), binding.inputPassword.text.toString())
-                .addOnCompleteListener { task -> signUpActionComplete(task) }
+            userService.createUser(binding.inputUsername.text.toString(), binding.inputEmail.text.toString(), binding.inputPassword.text.toString(),object :
+                UserService.CreateUserCallback {
+                override fun onSignUpSuccess(user: User) {
+                    Toast.makeText(applicationContext, "Sign Up Successful", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onSignUpFail(exception: String?) {
+                    Toast.makeText(applicationContext, exception, Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onTest(test: String?) {
+                    Toast.makeText(applicationContext, test, Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onSignUpDone() {
+                    binding.loadingBar.isVisible = false;
+                }
+            })
+
+
+
 
         } else {
             Toast.makeText(applicationContext, "Enter Credentials!", Toast.LENGTH_SHORT).show()
         }
     }
-
-    private fun signUpActionComplete(task: Task<AuthResult>) {
-        binding.loadingBar.isVisible = false;
-
-        if (task.isSuccessful) {
-            Toast.makeText(applicationContext, "Sign Up Successful", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(applicationContext, task.exception.toString(), Toast.LENGTH_SHORT).show()
-        }
-    }
-
 
 }
