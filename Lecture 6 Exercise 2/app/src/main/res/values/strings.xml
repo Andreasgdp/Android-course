@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Exercise2</string>
+
+    <string name="article_1">article_1</string>
+    <string name="article_1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet dolor et justo sagittis, sodales rhoncus velit imperdiet. Nunc eu egestas orci. Sed posuere ipsum nec orci rhoncus cursus. Donec leo dui, fringilla nec turpis a, faucibus tempus turpis. Nam ultricies porttitor ipsum id posuere. Pellentesque eget ullamcorper ipsum, vitae.</string>
+
+    <string name="article_2">article_2</string>
+    <string name="article_2_text">The Japanese yen for commerce is still well-known. Everyone pretends to like wheat until you mention barley. I was starting to worry that my pet turtle could tell what I was thinking. Imagine his surprise when he discovered that the safe was full of pudding. Martha came to the conclusion that shake weights are a great gift for any occasion.</string>
+
+</resources>

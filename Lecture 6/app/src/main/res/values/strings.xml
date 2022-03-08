@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="btn_white">White</string>
+    <string name="btn_green">Green</string>
+    <string name="btn_yellow">Yellow</string>
+    <string name="btn_red">Red</string>
+    <string name="text_white">This is the white fragment!</string>
+    <string name="text_green">This is the green fragment!</string>
+    <string name="text_yellow">This is the yellow fragment!</string>
+    <string name="text_red">This is the red fragment!</string>
+
+</resources>

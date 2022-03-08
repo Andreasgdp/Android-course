@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/jlars/Documents/GitHub/Android-course/Lecture 6/app/src/main/res/layout/white_fragment.xml" value="0.3375" />
+        <entry key="..\:/Users/jlars/Documents/GitHub/Android-course/Lecture 6/app/src/main/res/layout/yellow_fragment.xml" value="0.3375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK" />
+</project>
