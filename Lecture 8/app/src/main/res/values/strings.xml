@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Personal Infomation</string>
+    <string name="edit_name">Enter a name</string>
+    <string name="edit_address">Enter a address</string>
+    <string name="button_next">Next</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_finish">Finish</string>
+</resources>
